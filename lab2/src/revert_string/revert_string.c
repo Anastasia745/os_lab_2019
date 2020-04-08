@@ -2,6 +2,13 @@
 
 void RevertString(char *str)
 {
-	// your code here
+    int i = 0;
+    while (str[i]) i++;
+    for (int j = 0; j < i / 2; j++)
+    {
+       char t = str[j];
+       str[j] = str[i - j - 1];
+       str[i - j - 1] = t;
+    }
 }
 
